@@ -112,6 +112,11 @@ Must-Install-Project-with-the-Following-Programmes:
 - Twitter: [@redwanthr](https://twitter.com/@redwanthr)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/Redwan Tahir/)
 
+👤 **Md Arafat Hossain**
+
+- GitHub: <a href="https://github.com/HossainAraf">HossainAraf </a>
+- LinkedIn: <a href="https://linkedin.com/in/md-arafat-hossain-111403275"> Md. Arafat Hossain </a>
+
 ## 🔭 Future Features <a name="future-features"></a>
 
 - Adding Contact Form Page
