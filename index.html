@@ -1,12 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books-Store</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  
-  Test
+    <section class="container">
+        <h1>Awesome Books</h1>
+        <div class="display" id="display">
+           <!-- render the document -->
+        </div>
+        <form action="">
+            <br>
+            <input type="text" id="Title" placeholder="Title"><br><br>
+            <input type="text" id="Author" placeholder="Author"><br> <br> 
+        </form>
+        <button onclick="addBook()"> Add</button> 
+    </section>
+
+    
+    <script src="./index.js"></script>
+    <script>
+        displayBooks();
+    </script>
 </body>
 </html>
