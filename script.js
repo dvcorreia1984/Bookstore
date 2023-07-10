@@ -11,7 +11,6 @@ const books = [
   },
 ];
 
-
 // Display books
 function displayBooks() {
   let book = '';
@@ -38,4 +37,3 @@ function addBook() {
   }
 }
 addBook();
-
