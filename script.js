@@ -37,3 +37,15 @@ function addBook() {
   }
 }
 addBook();
+
+// Remove Book
+function removeBook(removeId) {
+  const filter = books.filter((remBook, i) => {
+    if (removeId === remBook.Id) {
+      books.splice(i, 1);
+      displayBooks();
+    }
+  });
+  return filter;
+}
+removeBook();
