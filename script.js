@@ -45,6 +45,7 @@ function removeBook(removeId) {
       books.splice(i, 1);
       displayBooks();
     }
+    return true;
   });
   return filter;
 }
