@@ -15,7 +15,15 @@ class Books{
            Author: 'Testeroo Testyy',
          },
        ];
+       if (localStorage.getItem('books') != null) {
+        this.books = JSON.parse(localStorage.getItem('books'));
+       } 
  }
+
+
+ 
+
+
 // Display the book list
  displayBooks()
  {
@@ -68,7 +76,7 @@ saveToLocalStorage(){
 }
 }
 
-// Create an instance of the Books class
+// Create object of Books class
 const a = new Books();
 a.creatObject();
 a.displayBooks();
