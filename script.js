@@ -1,59 +1,65 @@
-const books = [
-  {
-    Id: 1,
-    Title: 'Lorem ipsum',
-    Author: 'Testeroo Testyy',
-  },
-  {
-    Id: 2,
-    Title: 'Second Books',
-    Author: 'Testeroo Testyy',
-  },
-];
+class Books{
+  creatObject(){
+    this.books = [
+         {
+           Id: 1,
+           Title: 'Lorem ipsum',
+           Author: 'Testeroo Testyy',
+         },
+         {
+           Id: 2,
+           Title: 'Second Books',
+           Author: 'Testeroo Testyy',
+         },
+       ];
+ }
 
-// Update books from local storage
-if (localStorage.getItem('myBooklist') != null) {
-  const myBooklist = JSON.parse(localStorage.getItem('myBooklist'));
-  books.length = 0;
-  books.push(...myBooklist);
-}
+ displayBookks()
+ {
+    const x=this.books;
+    let book="";
+     for (let i = 0; i < x.length; i += 1) {
+       book += `<p>${x[i].Title}</p>`;
+       book += `<p>${x[i].Author}</p>`;
+       book += `<button onclick="a. removebooks(${x[i].Id});">Remove</button><br>`;
+       book += '<hr>';
+     }
+     document.getElementById('display').innerHTML = book;
+ }
+ addbooks()
+ {
+ 
+       let x=this.books;
+        const title = document.getElementById('Title').value;
+        const author = document.getElementById('Author').value;
+        if (title!="" && author!="") {
+         
+          const bookId = x.length + 1;
+          x.push({ Id: bookId, Title: title, Author: author });
+          this.displayBookks();
+          document.querySelector('form').reset();
+          this.saveToLocalStorage();
+        //   alert(bookId);
+        }
+ }
 
-// Display books
-function displayBooks() {
-  let book = '';
-  for (let i = 0; i < books.length; i += 1) {
-    book += `<p>${books[i].Title}</p>`;
-    book += `<p>${books[i].Author}</p>`;
-    book += `<button onclick="removeBook(${books[i].Id})">Remove</button><br>`;
-    book += '<hr>';
-  }
-  document.getElementById('display').innerHTML = book;
+ removebooks(removeId){
+  let book=this.books;
+  const filter = book.filter((remBook, i) => {
+      if (removeId === remBook.Id) {
+        book.splice(i, 1);
+        this.displayBookks();
+        this.saveToLocalStorage();
+      }
+      return true;
+    });
+    return filter;
+ }
+ saveToLocalStorage() {
+  localStorage.setItem('books', JSON.stringify(this.books));
 }
-displayBooks();
-
-// Add books
-function addBook() {
-  const title = document.getElementById('Title').value;
-  const author = document.getElementById('Author').value;
-  if (title && author) {
-    const bookId = books.length + 1;
-    books.push({ Id: bookId, Title: title, Author: author });
-    displayBooks();
-    document.querySelector('form').reset();
-    localStorage.setItem('myBooklist', JSON.stringify(books));
-  }
 }
-addBook();
-
-// Remove Book
-function removeBook(removeId) {
-  const filter = books.filter((remBook, i) => {
-    if (removeId === remBook.Id) {
-      books.splice(i, 1);
-      displayBooks();
-    }
-    return true;
-  });
-  return filter;
-}
-removeBook();
+  
+let a = new Books();
+a.creatObject();
+a.displayBookks();
