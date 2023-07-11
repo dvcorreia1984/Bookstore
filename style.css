@@ -32,7 +32,6 @@
 
 #display {
   display: flex;
-  flex-direction: row;
 }
 
 
@@ -71,3 +70,8 @@ input {
 #book&author {
   display: flex;
 }
+
+div#books-container {
+  display: flex;
+}
+

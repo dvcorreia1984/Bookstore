@@ -30,10 +30,11 @@ class Books{
 
       document.getElementById('display').innerHTML = `
       <div class="display display-type-${displayType}" id="display"></div>;`
+       book += `<div id='books-container'>`
        book += `<div id='book-author'><p>"${x[i].Title}"  by  </p>`;
        book += `<p>${x[i].Author}</p> </div>`;
        book += `<button onclick="a. removeBooks(${x[i].Id});">Remove</button><br>`;
-       book += '<hr>';
+       book += '<hr></div>';
        if (displayType == 1) {
         displayType = 2;
       } else {
