@@ -18,7 +18,7 @@ form {
   justify-content: center;
   align-items: center;
   margin: 10%;
-  padding: 5%; 
+  padding: 5%;
 }
 
 .container h1 {
@@ -58,12 +58,11 @@ form {
   border: 3px solid #000;
   border-radius: 3%;
   font-weight: 500;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.8);
-  box-shadow: black;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 80%);
 }
 
-#Title,
-#Author {
+#title,
+#author {
   margin: 6px;
   height: 40px;
   border: 4px solid #000;
@@ -71,8 +70,8 @@ form {
   padding-left: 2%;
 }
 
-#Title::placeholder,
-#Author::placeholder {
+#title::placeholder,
+#author::placeholder {
   color: #000;
 }
 
@@ -102,8 +101,7 @@ button#addbtn {
   border: 3px solid #000;
   border-radius: 3%;
   font-weight: 500;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.8);
-  box-shadow: black;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 80%);
 }
 
 div#formbut {
