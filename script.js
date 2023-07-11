@@ -24,14 +24,14 @@ class Books{
      for (let i = 0; i < x.length; i += 1) {
        book += `<p>${x[i].Title}</p>`;
        book += `<p>${x[i].Author}</p>`;
-       book += `<button onclick="a. removebooks(${x[i].Id});">Remove</button><br>`;
+       book += `<button onclick="a. removeBooks(${x[i].Id});">Remove</button><br>`;
        book += '<hr>';
      }
      document.getElementById('display').innerHTML = book;
  }
    
 //Add books
-addbooks()
+addBooks()
 {
 
       let x=this.books;
@@ -47,5 +47,19 @@ addbooks()
        //   alert(bookId);
        }
 }
+
+// Remove books from the list
+removeBooks(removeId){
+  let book=this.books;
+  const filter = book.filter((remBook, i) => {
+      if (removeId === remBook.Id) {
+        book.splice(i, 1);
+        this.displayBookks();
+        this.saveToLocalStorage();
+      }
+      return true;
+    });
+    return filter;
+ }
 }
   
