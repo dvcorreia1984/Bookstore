@@ -61,5 +61,10 @@ removeBooks(removeId){
     });
     return filter;
  }
+
+// Save to local storage
+saveToLocalStorage(){
+  localStorage.setItem('books', JSON.stringify(this.books));
 }
-  
+}
+ 
