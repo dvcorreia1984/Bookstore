@@ -29,8 +29,8 @@ class Books{
      for (let i = 0; i < x.length; i += 1) {
 
       document.getElementById('display').innerHTML = `
-      <div class="display display-type-${displayType}" id="display"></div>;`
-       book += `<div id='books-container'>`
+      <div class="display" id="display"></div>;`
+       book += `<div id='books-container${displayType}'>`
        book += `<div id='book-author'><p id="booktext">"${x[i].Title}" by ${x[i].Author}</p></div>`;
        book += `<button onclick="a. removeBooks(${x[i].Id});">Remove</button></div>`;
        if (displayType == 1) {

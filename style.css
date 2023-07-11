@@ -76,8 +76,14 @@ input {
   display: flex;
 }
 
-div#books-container {
+div#books-container1 {
   display: flex;
   width: 100%;
+}
+
+div#books-container2 {
+  display: flex;
+  width: 100%;
+  background-color: lightgray;
 }
 
