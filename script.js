@@ -11,7 +11,7 @@ class Books {
       {
         Id: 2,
         Title: 'Second Books',
-        A: 'Testeroo Testyy',
+        Author: 'Testeroo Testyy',
       },
     ];
     if (localStorage.getItem('books') != null) {
@@ -29,7 +29,7 @@ class Books {
       <div class="display" id="display"></div>`;
       book += `<div id='books-container${displayType}'>`;
       book += `<div id='book-author'><p id="booktext">"${x[i].title}" by ${x[i].author}</p></div>`;
-      book += `<button onclick="a. removeBooks(${x[i].id});">Remove</button></div>`;
+      book += `<button onclick="a. removeBooks(${x[i].Id});">Remove</button></div>`;
       if (displayType === 1) {
         displayType = 2;
       } else {
@@ -46,7 +46,7 @@ class Books {
     const author = document.getElementById('author').value;
     if (title !== '' && author !== '') {
       const bookId = x.length + 1;
-      x.push({ Id: bookId, Title: title, Author: author });
+      x.push({ Id: bookId, title, author });
       this.displayBooks();
       document.querySelector('form').reset();
       this.saveToLocalStorage();
@@ -58,7 +58,7 @@ class Books {
   removeBooks(removeId) {
     const book = this.books;
     const filter = book.filter((remBook, i) => {
-      if (removeId === remBook.id) {
+      if (removeId === remBook.Id) {
         book.splice(i, 1);
         this.displayBooks();
         this.saveToLocalStorage();
