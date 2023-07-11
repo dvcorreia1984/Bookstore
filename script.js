@@ -11,6 +11,13 @@ const books = [
   },
 ];
 
+// Update books from local storage
+if (localStorage.getItem('myBooklist') != null) {
+  const myBooklist = JSON.parse(localStorage.getItem('myBooklist'));
+  books.length = 0;
+  books.push(...myBooklist);
+}
+
 // Display books
 function displayBooks() {
   let book = '';
