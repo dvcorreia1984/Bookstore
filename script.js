@@ -17,7 +17,7 @@ class Books{
        ];
  }
 // Display the book list
- displayBookks()
+ displayBooks()
  {
     const x=this.books;
     let book="";
@@ -41,7 +41,7 @@ addBooks()
         
          const bookId = x.length + 1;
          x.push({ Id: bookId, Title: title, Author: author });
-         this.displayBookks();
+         this.displayBooks();
          document.querySelector('form').reset();
          this.saveToLocalStorage();
        //   alert(bookId);
@@ -54,7 +54,7 @@ removeBooks(removeId){
   const filter = book.filter((remBook, i) => {
       if (removeId === remBook.Id) {
         book.splice(i, 1);
-        this.displayBookks();
+        this.displayBooks();
         this.saveToLocalStorage();
       }
       return true;
@@ -67,4 +67,9 @@ saveToLocalStorage(){
   localStorage.setItem('books', JSON.stringify(this.books));
 }
 }
- 
+
+// Create an instance of the Books class
+const a = new Books();
+a.creatObject();
+a.displayBooks();
+a.saveToLocalStorage();
