@@ -26,7 +26,7 @@ class Books{
     const x=this.books;
     let book="";
      for (let i = 0; i < x.length; i += 1) {
-       book += `<p>${x[i].Title}</p>`;
+       book += `<p>"${x[i].Title}"  by  </p>`;
        book += `<p>${x[i].Author}</p>`;
        book += `<button onclick="a. removeBooks(${x[i].Id});">Remove</button><br>`;
        book += '<hr>';
