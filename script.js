@@ -1,3 +1,6 @@
+
+//Create Books class to manage the book list
+
 class Books{
   creatObject(){
     this.books = [
@@ -13,7 +16,7 @@ class Books{
          },
        ];
  }
-
+// Display the book list
  displayBookks()
  {
     const x=this.books;
@@ -26,5 +29,23 @@ class Books{
      }
      document.getElementById('display').innerHTML = book;
  }
+   
+//Add books
+addbooks()
+{
+
+      let x=this.books;
+       const title = document.getElementById('Title').value;
+       const author = document.getElementById('Author').value;
+       if (title!="" && author!="") {
+        
+         const bookId = x.length + 1;
+         x.push({ Id: bookId, Title: title, Author: author });
+         this.displayBookks();
+         document.querySelector('form').reset();
+         this.saveToLocalStorage();
+       //   alert(bookId);
+       }
+}
 }
   
