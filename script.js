@@ -25,11 +25,18 @@ class Books{
  {
     const x=this.books;
     let book="";
+    let displayType = 1;
      for (let i = 0; i < x.length; i += 1) {
-       book += `<p>"${x[i].Title}"  by  </p>`;
-       book += `<p>${x[i].Author}</p>`;
+      // document.getElementById(container).innerHTML = `<div class="display display-type-${displayType}" id="display"></div>`;
+       book += `<div id='book-author'><p>"${x[i].Title}"  by  </p>`;
+       book += `<p>${x[i].Author}</p> </div>`;
        book += `<button onclick="a. removeBooks(${x[i].Id});">Remove</button><br>`;
        book += '<hr>';
+       if (displayType == 1) {
+        displayType = 2;
+      } else {
+        displayType = 1;
+      }
      }
      document.getElementById('display').innerHTML = book;
  }

@@ -18,8 +18,10 @@
 .container h1 {
   margin: 1% 0;
 }
+
 .display {
   display: flex;
+  flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
   padding: 5%;
@@ -27,9 +29,19 @@
   width: 80%;
 }
 
+#display {
+  display: flex;
+}
+
+
 .display p {
   font-weight: 400;
   font-size: 18px;
+}
+
+.display #book-author {
+  background-color: blueviolet;
+  display: flex;
 }
 
 .display button {
@@ -52,4 +64,8 @@
 
 input {
   color: #000;
+}
+
+#book&author {
+  display: flex;
 }
