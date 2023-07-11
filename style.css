@@ -43,6 +43,8 @@
 .display #book-author {
   background-color: blueviolet;
   display: flex;
+  width: 40vw;
+  padding: 10px;
 }
 
 .display button {
