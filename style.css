@@ -4,3 +4,40 @@
   box-sizing: border-box;
   text-align: center;
 }
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10% 25%;
+  padding: 5%; 
+}
+
+.container h1 {
+  margin: 1% 0;
+}
+.display {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 5%;
+  border: 3.5px solid #000;
+  width: 80%;
+}
+
+.display p {
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.display button {
+  border: 1px solid #000;
+  border-radius: 3%;
+  font-weight: 500;
+}
+
+#Title,
+#Author {
+  border: 2.5px solid #000;
+}
