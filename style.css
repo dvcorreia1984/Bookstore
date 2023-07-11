@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   text-align: center;
+  font-family: ;
 }
 
 .container {
@@ -10,7 +11,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 10% 25%;
+  margin: 10%;
   padding: 5%; 
 }
 
@@ -40,4 +41,15 @@
 #Title,
 #Author {
   border: 2.5px solid #000;
+  text-align: left;
+  padding-left: 2%;
+}
+
+#Title::placeholder,
+#Author::placeholder {
+  color: #000;
+}
+
+input {
+  color: #000;
 }
