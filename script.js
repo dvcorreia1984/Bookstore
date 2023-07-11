@@ -2,7 +2,7 @@
 //Create Books class to manage the book list
 
 class Books{
-  creatObject(){
+  createObject(){
     this.books = [
          {
            Id: 1,
@@ -19,10 +19,6 @@ class Books{
         this.books = JSON.parse(localStorage.getItem('books'));
        } 
  }
-
-
- 
-
 
 // Display the book list
  displayBooks()
@@ -78,6 +74,6 @@ saveToLocalStorage(){
 
 // Create object of Books class
 const a = new Books();
-a.creatObject();
+a.createObject();
 a.displayBooks();
 a.saveToLocalStorage();
