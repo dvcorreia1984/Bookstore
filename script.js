@@ -75,20 +75,20 @@ class Books {
 
   // Add local time to date id
 
-addDate() {
-  const date = new Date();
-  const options = {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
-    hour: 'numeric',
-    minute: 'numeric',
-    second: 'numeric',
-    hour12: true
-  };
-  const dateId = date.toLocaleString('en-US', options);
-  document.getElementById('date').innerHTML = dateId;
-}
+  addDate() {
+    const date = new Date();
+    const options = {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+      hour: 'numeric',
+      minute: 'numeric',
+      second: 'numeric',
+      hour12: true
+    };
+    const dateId = date.toLocaleString('en-US', options);
+    document.getElementById('date').innerHTML = dateId;
+  }
 
 
   lists(){
@@ -112,7 +112,6 @@ addDate() {
 
   }
  
-
 }
 
 // Create object of Books class
