@@ -75,6 +75,7 @@ class Books {
 
   // Add local time to date id
 
+  // eslint-disable-next-line class-methods-use-this
   addDate() {
     const date = new Date();
     const options = {
@@ -84,34 +85,35 @@ class Books {
       hour: 'numeric',
       minute: 'numeric',
       second: 'numeric',
-      hour12: true
+      hour12: true,
     };
     const dateId = date.toLocaleString('en-US', options);
     document.getElementById('date').innerHTML = dateId;
   }
 
-
-  lists(){
-    document.getElementById('add-new').style.display='none';
-    document.getElementById('contactus').style.display='none';
-    document.getElementById('lists').style.display='flex';
-    document.getElementById('container').style.display='flex';
+  // eslint-disable-next-line class-methods-use-this
+  lists() {
+    document.getElementById('add-new').style.display = 'none';
+    document.getElementById('contactus').style.display = 'none';
+    document.getElementById('lists').style.display = 'flex';
+    document.getElementById('container').style.display = 'flex';
   }
 
-  addNewBook(){
-    document.getElementById('lists').style.display='none';
-    document.getElementById('contactus').style.display='none';
-    document.getElementById('add-new').style.display='flex';
-    document.getElementById('container').style.display='flex';
+  // eslint-disable-next-line class-methods-use-this
+  addNewBook() {
+    document.getElementById('lists').style.display = 'none';
+    document.getElementById('contactus').style.display = 'none';
+    document.getElementById('add-new').style.display = 'flex';
+    document.getElementById('container').style.display = 'flex';
   }
-  contactus(){
-    document.getElementById('lists').style.display='none';
-    document.getElementById('contactus').style.display='flex';
-    document.getElementById('add-new').style.display='none';
-    document.getElementById('container').style.display='none';
 
+  // eslint-disable-next-line class-methods-use-this
+  contactus() {
+    document.getElementById('lists').style.display = 'none';
+    document.getElementById('contactus').style.display = 'flex';
+    document.getElementById('add-new').style.display = 'none';
+    document.getElementById('container').style.display = 'none';
   }
- 
 }
 
 // Create object of Books class
@@ -120,4 +122,3 @@ a.createObject();
 a.displayBooks();
 a.saveToLocalStorage();
 a.addDate();
-
