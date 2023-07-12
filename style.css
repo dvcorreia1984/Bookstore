@@ -162,3 +162,26 @@ footer {
 footer p {
   padding: 0 1%;
 }
+
+h1#h1contact {
+  padding: 20px;
+}
+
+div#contactus {
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+div#contactus li {
+  text-align: left;
+}
+
+div#contactus p {
+  text-align: left;
+}
+
+div#pwrapper {
+  padding: 20px;
+}

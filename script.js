@@ -72,6 +72,21 @@ class Books {
   saveToLocalStorage() {
     localStorage.setItem('books', JSON.stringify(this.books));
   }
+
+  // Add local time to date id
+  addDate() {
+    const date = new Date();
+    const dateId = date.toLocaleTimeString("en-GB", {
+      
+      month: "short",
+      day: "numeric",
+      year: "numeric",
+      hour: "numeric",
+      minute: "2-digit"
+    });
+    document.getElementById('date').innerHTML = dateId;
+  }
+
 }
 
 // Create object of Books class
@@ -79,3 +94,5 @@ const a = new Books();
 a.createObject();
 a.displayBooks();
 a.saveToLocalStorage();
+a.addDate();
+
