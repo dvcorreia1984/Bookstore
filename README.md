@@ -18,8 +18,6 @@
     - [Key Features](#key-features)
   - [🛠 Tech Stack](#tech-stack)
 
-  - [🚀 Live Demo](#live-demo)
-
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -31,7 +29,8 @@
 - [❓ FAQ](#faq)
 - [📝 License](#license)
 
-# 📖 Awesome books <**Awesome **Books is the library website that allows users to add and remove books from the list. There is a page for a list of books and a page where you can add any book to the library. There are also contact details whenever you want to contact us.
+## 📖 Awesome books 
+**Awesome** Books is the library website that allows users to add and remove books from the list. There is a page for a list of books and a page where you can add any book to the library. There are also contact details whenever you want to contact us.
 
 ## 🛠 Built With <a name="built-with">HTML, CSS and JavaScript</a>
 
@@ -45,13 +44,14 @@
 
 ### Key Features <a name="key-features">
 
-</a>
+-A Navigation bar contains three content sections: Books list, Add book form, Contact info.
+-When someone click on any of the links, the main area changes to display only one of three content sections (Books list, Add book form, Contact info).
+- Local time and date is displayed
+- Data is stored in local storage
+- Book list will remain same after refresh the page.
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## 🚀 Live Demo <a name="live-demo"></a>
-
-- [Live Demo Link]()
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
