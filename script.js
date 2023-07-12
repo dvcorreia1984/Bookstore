@@ -75,15 +75,21 @@ class Books {
 
   // Add local time to date id
 
-  addDate() {
-    const date = new Date();
-    const f = new Intl.DateTimeFormat("en-us",{
-    dateStyle:"long",
-    timeStyle:"medium"
-    })
-    const dates = f.format(date);
-    document.getElementById('date').innerHTML =dates;
-  }
+addDate() {
+  const date = new Date();
+  const options = {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+    hour: 'numeric',
+    minute: 'numeric',
+    second: 'numeric',
+    hour12: true
+  };
+  const dateId = date.toLocaleString('en-US', options);
+  document.getElementById('date').innerHTML = dateId;
+}
+
 
   lists(){
     document.getElementById('add-new').style.display='none';
