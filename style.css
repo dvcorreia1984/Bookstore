@@ -144,4 +144,15 @@ nav ul li a:hover {
   text-decoration: none;
   color: #355C80;
 }
+
+footer {
+  margin: 5%;
+  padding: 1%;
+  border: 1.5px solid #000;
+  display: flex;
+  justify-content: flex-start;
+}
+
+footer p {
+  padding: 0 1%;
 }
