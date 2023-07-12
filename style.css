@@ -145,6 +145,12 @@ nav ul li a:hover {
   color: #355C80;
 }
 
+#date {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1% 2%;
+}
+
 footer {
   margin: 5%;
   padding: 1%;
