@@ -107,3 +107,41 @@ div#formbut {
   display: flex;
   flex-direction: row-reverse;
 }
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1% 5%;
+  border: 1.5px solid #000;
+  margin: 1%;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  flex-basis: 36%;
+  list-style-type: none;
+}
+
+nav ul li {
+  font-weight: 300;
+  border-left: 1px solid #000;
+  padding-left: 5%;
+}
+
+nav ul li:first-child {
+  border-left: none;
+}
+
+
+nav ul li a {
+  text-decoration: none;
+  color: #000;
+}
+
+nav ul li a:hover {
+  text-decoration: none;
+  color: #355C80;
+}
+}
