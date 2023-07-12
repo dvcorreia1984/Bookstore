@@ -5,13 +5,13 @@ class Books {
     this.books = [
       {
         Id: 1,
-        Title: 'Lorem ipsum',
-        Author: 'Testeroo Testyy',
+        title: 'Lorem ipsum',
+        author: 'Testeroo Testyy',
       },
       {
         Id: 2,
-        Title: 'Second Books',
-        Author: 'Testeroo Testyy',
+        title: 'Second Books',
+        author: 'Testeroo Testyy',
       },
     ];
     if (localStorage.getItem('books') != null) {
