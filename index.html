@@ -10,18 +10,35 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <header>
+        <nav>
+            <h3>awesome books</h3>
+            <ul>
+                <li>Lists</li>
+                <li>Add new</li>
+                <li>Contact</li>
+            </ul>
+        </nav>
+        <div id="date"></div>
+    </header>
     <section class="container" id="container">
-        <h1>All awesome Books</h1>
+        <div id="lists">
+            <h1>All awesome Books</h1>
             <div class="display display-type-1" id="display"></div>
         </div>
+        </div>
+       <div id="add-new">
         <h1>Add a new book</h1>
         <form action="">
             <input type="text" id="title" placeholder="title">
             <input type="text" id="author" placeholder="author"> 
             <div id="formbut"><button id="addbtn" onclick="a.addBooks()"> Add</button></div>
         </form>
+       </div>  
     </section>
-
+ <footer>
+    <p>Copyright</p>
+ </footer>
     
     <script src="./script.js"></script>
 </body>
