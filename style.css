@@ -23,6 +23,7 @@ form {
 
 .container h1 {
   margin: 1% 0;
+  padding-bottom: 5%;
 }
 
 .display {
@@ -171,6 +172,7 @@ div#contactus {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 5%;
 }
 
 div#contactus li {
@@ -183,4 +185,14 @@ div#contactus p {
 
 div#pwrapper {
   padding: 20px;
+}
+
+#lists {
+  display: flex;
+  flex-direction: column;
+}
+
+#add-new {
+  display: flex;
+  flex-direction: column;
 }
