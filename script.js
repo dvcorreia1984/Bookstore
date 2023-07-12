@@ -1,59 +1,81 @@
-const books = [
-  {
-    Id: 1,
-    Title: 'Lorem ipsum',
-    Author: 'Testeroo Testyy',
-  },
-  {
-    Id: 2,
-    Title: 'Second Books',
-    Author: 'Testeroo Testyy',
-  },
-];
+// Create Books class to manage the book list
 
-// Update books from local storage
-if (localStorage.getItem('myBooklist') != null) {
-  const myBooklist = JSON.parse(localStorage.getItem('myBooklist'));
-  books.length = 0;
-  books.push(...myBooklist);
-}
-
-// Display books
-function displayBooks() {
-  let book = '';
-  for (let i = 0; i < books.length; i += 1) {
-    book += `<p>${books[i].Title}</p>`;
-    book += `<p>${books[i].Author}</p>`;
-    book += `<button onclick="removeBook(${books[i].Id})">Remove</button><br>`;
-    book += '<hr>';
-  }
-  document.getElementById('display').innerHTML = book;
-}
-displayBooks();
-
-// Add books
-function addBook() {
-  const title = document.getElementById('Title').value;
-  const author = document.getElementById('Author').value;
-  if (title && author) {
-    const bookId = books.length + 1;
-    books.push({ Id: bookId, Title: title, Author: author });
-    displayBooks();
-    document.querySelector('form').reset();
-    localStorage.setItem('myBooklist', JSON.stringify(books));
-  }
-}
-addBook();
-
-// Remove Book
-function removeBook(removeId) {
-  const filter = books.filter((remBook, i) => {
-    if (removeId === remBook.Id) {
-      books.splice(i, 1);
-      displayBooks();
+class Books {
+  createObject() {
+    this.books = [
+      {
+        Id: 1,
+        title: 'Lorem ipsum',
+        author: 'Testeroo Testyy',
+      },
+      {
+        Id: 2,
+        title: 'Second Books',
+        author: 'Testeroo Testyy',
+      },
+    ];
+    if (localStorage.getItem('books') != null) {
+      this.books = JSON.parse(localStorage.getItem('books'));
     }
-    return true;
-  });
-  return filter;
+  }
+
+  // Display the book list
+  displayBooks() {
+    const x = this.books;
+    let book = '';
+    let displayType = 1;
+    for (let i = 0; i < x.length; i += 1) {
+      document.getElementById('display').innerHTML = `
+      <div class="display" id="display"></div>`;
+      book += `<div id='books-container${displayType}'>`;
+      book += `<div id='book-author'><p id="booktext">"${x[i].title}" by ${x[i].author}</p></div>`;
+      book += `<button onclick="a. removeBooks(${x[i].Id});">Remove</button></div>`;
+      if (displayType === 1) {
+        displayType = 2;
+      } else {
+        displayType = 1;
+      }
+    }
+    document.getElementById('display').innerHTML = book;
+  }
+
+  // Add books
+  addBooks() {
+    const x = this.books;
+    const title = document.getElementById('title').value;
+    const author = document.getElementById('author').value;
+    if (title !== '' && author !== '') {
+      const bookId = x.length + 1;
+      x.push({ Id: bookId, title, author });
+      this.displayBooks();
+      document.querySelector('form').reset();
+      this.saveToLocalStorage();
+    //   alert(bookId);
+    }
+  }
+
+  // Remove books from the list
+  removeBooks(removeId) {
+    const book = this.books;
+    const filter = book.filter((remBook, i) => {
+      if (removeId === remBook.Id) {
+        book.splice(i, 1);
+        this.displayBooks();
+        this.saveToLocalStorage();
+      }
+      return true;
+    });
+    return filter;
+  }
+
+  // Save to local storage
+  saveToLocalStorage() {
+    localStorage.setItem('books', JSON.stringify(this.books));
+  }
 }
-removeBook();
+
+// Create object of Books class
+const a = new Books();
+a.createObject();
+a.displayBooks();
+a.saveToLocalStorage();

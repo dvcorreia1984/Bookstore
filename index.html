@@ -5,25 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Books-Store</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <section class="container">
-        <h1>Awesome Books</h1>
-        <div class="display" id="display">
-           <!-- render the document -->
+    <section class="container" id="container">
+        <h1>All awesome Books</h1>
+            <div class="display display-type-1" id="display"></div>
         </div>
+        <h1>Add a new book</h1>
         <form action="">
-            <br>
-            <input type="text" id="Title" placeholder="Title"><br><br>
-            <input type="text" id="Author" placeholder="Author"><br> <br> 
+            <input type="text" id="title" placeholder="title">
+            <input type="text" id="author" placeholder="author"> 
+            <div id="formbut"><button id="addbtn" onclick="a.addBooks()"> Add</button></div>
         </form>
-        <button onclick="addBook()"> Add</button> 
     </section>
 
     
     <script src="./script.js"></script>
-    <script>
-        displayBooks();
-    </script>
 </body>
 </html>

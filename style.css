@@ -1,6 +1,109 @@
 * {
+  font-family: 'Comic Neue', cursive;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   text-align: center;
+}
+
+form {
+  display: flex;
+  width: 37vw;
+  flex-direction: column;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10%;
+  padding: 5%;
+}
+
+.container h1 {
+  margin: 1% 0;
+}
+
+.display {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  border: 3.5px solid #000;
+  width: 80%;
+  margin-bottom: 5vh;
+}
+
+#display {
+  display: flex;
+}
+
+.display p {
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.display #book-author {
+  display: flex;
+  width: 100%;
+  padding: 10px;
+}
+
+.display button {
+  width: 10vw;
+  margin: 3px 10px;
+  padding: 6px 5px;
+  border: 3px solid #000;
+  border-radius: 3%;
+  font-weight: 500;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 80%);
+}
+
+#title,
+#author {
+  margin: 6px;
+  height: 40px;
+  border: 4px solid #000;
+  text-align: left;
+  padding-left: 2%;
+}
+
+#title::placeholder,
+#author::placeholder {
+  color: #000;
+}
+
+input {
+  color: #000;
+}
+
+#book&author {
+  display: flex;
+}
+
+div#books-container1 {
+  display: flex;
+  width: 100%;
+}
+
+div#books-container2 {
+  display: flex;
+  width: 100%;
+  background-color: lightgray;
+}
+
+button#addbtn {
+  width: 10vw;
+  margin: 3px 10px;
+  padding: 6px 5px;
+  border: 3px solid #000;
+  border-radius: 3%;
+  font-weight: 500;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 80%);
+}
+
+div#formbut {
+  display: flex;
+  flex-direction: row-reverse;
 }
