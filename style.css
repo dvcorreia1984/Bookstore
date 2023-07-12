@@ -12,6 +12,10 @@ form {
   flex-direction: column;
 }
 
+footer p {
+  padding: 0 1%;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -61,7 +65,7 @@ form {
 }
 
 .display button:hover {
-  background-color: #355C80;
+  background-color: #355c80;
   border: 3px solid #000;
   color: aliceblue;
 }
@@ -110,7 +114,7 @@ button#addbtn {
 }
 
 button#addbtn:hover {
-  background-color: #355C80;
+  background-color: #355c80;
   border: 3px solid #180505d3;
   color: antiquewhite;
 }
@@ -146,7 +150,6 @@ nav ul li:first-child {
   border-left: none;
 }
 
-
 nav ul li a {
   text-decoration: none;
   color: #000;
@@ -154,7 +157,7 @@ nav ul li a {
 
 nav ul li a:hover {
   text-decoration: none;
-  color: #355C80;
+  color: #355c80;
 }
 
 #date {
@@ -169,10 +172,6 @@ footer {
   border: 1.5px solid #000;
   display: flex;
   justify-content: flex-start;
-}
-
-footer p {
-  padding: 0 1%;
 }
 
 h1#h1contact {
