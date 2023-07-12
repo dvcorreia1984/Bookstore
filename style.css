@@ -60,6 +60,12 @@ form {
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 80%);
 }
 
+.display button:hover {
+  background-color: #355C80;
+  border: 3px solid #000;
+  color: aliceblue;
+}
+
 #title,
 #author {
   margin: 6px;
@@ -101,6 +107,12 @@ button#addbtn {
   border-radius: 3%;
   font-weight: 500;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 80%);
+}
+
+button#addbtn:hover {
+  background-color: #355C80;
+  border: 3px solid #180505d3;
+  color: antiquewhite;
 }
 
 div#formbut {
